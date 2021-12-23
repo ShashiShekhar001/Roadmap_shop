@@ -77,7 +77,7 @@ app.use(passport.session())
 app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
-  res.render('index.ejs')
+  res.sendFile(__dirname+'/views/index.html')
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -91,9 +91,8 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
 }))
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-  res.render('register.ejs')
+  res.sendFile(__dirname+'/views/register.html')
 })
-
 app.post('/register', checkNotAuthenticated, async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
@@ -129,7 +128,7 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 app.get("/menu",function(req,res){
- res.render("menu",{newMenus:menus});
+  res.sendFile(__dirname+'/views/menu.html')
 });
 app.get("/section/:Reqname",function(req,res){
   const p=req.params.Reqname;
@@ -141,15 +140,15 @@ app.get("/section/:Reqname",function(req,res){
 });
 
 app.get("/about",function(req,res){
-  res.render("About");
+  res.sendFile(__dirname+'/views/About.html')
 });
 
 app.get("/contact",function(req,res){
-  res.render("contact");
+  res.sendFile(__dirname+'/views/contact.html')
 });
 
 app.get("/search",function(req,res){
-   res.render("search");
+  res.sendFile(__dirname+'/views/search.html')
 });
 app.post("/contact",function(req,res){
    const name= req.body.username;
