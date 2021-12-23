@@ -77,7 +77,7 @@ app.use(passport.session())
 app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
-  res.sendFile(__dirname+'/views/index.html')
+  res.sendFile(__dirname+'/index.html')
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -91,7 +91,7 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
 }))
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-  res.sendFile(__dirname+'/views/register.html')
+  res.sendFile(__dirname+'/register.html')
 })
 app.post('/register', checkNotAuthenticated, async (req, res) => {
   try {
@@ -128,7 +128,7 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 app.get("/menu",function(req,res){
-  res.sendFile(__dirname+'/views/menu.html')
+  res.sendFile(__dirname+'/menu.html')
 });
 app.get("/section/:Reqname",function(req,res){
   const p=req.params.Reqname;
@@ -140,15 +140,15 @@ app.get("/section/:Reqname",function(req,res){
 });
 
 app.get("/about",function(req,res){
-  res.sendFile(__dirname+'/views/About.html')
+  res.sendFile(__dirname+'/About.html')
 });
 
 app.get("/contact",function(req,res){
-  res.sendFile(__dirname+'/views/contact.html')
+  res.sendFile(__dirname+'/contact.html')
 });
 
 app.get("/search",function(req,res){
-  res.sendFile(__dirname+'/views/search.html')
+  res.sendFile(__dirname+'/search.html')
 });
 app.post("/contact",function(req,res){
    const name= req.body.username;
