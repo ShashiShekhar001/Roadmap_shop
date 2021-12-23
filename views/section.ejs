@@ -1,0 +1,45 @@
+<%- include('partials/header1') -%>
+     <section class="<%= style %> het" data-transition="fade-in slide-out">
+        <div class="nav-bar">
+            <div class="logo">
+            <div class="circle"></div>
+            <h2>RoadMap_Shop</h2>
+            </div>
+            <div class="nav-option">
+             <li><button class="nav-links"><a href="/">Home</a></button></li>
+             <li><button class="nav-links"><a href="/menu">Menu</a></button></li>
+             <button class="toggle-nav <%= style %>">
+              <i class="fas fa-bars"></i>
+            </button> 
+            </div>
+        </div>
+        <div class="content">
+          <h1 class="title">What is <%= ItemName %>?</h1>
+          <img src="<%= ItemSrc %>" alt="" class="img-center">
+          <h1 class="info"><%= ItemInfo %></h1>
+        </div>
+     </section>
+     <div class="sidebar-overlay">
+      <aside class="sidebar">
+       <button class="sidebar-close">
+           <i class="fas fa-times"></i>
+         </button>
+         <!-- links -->
+         <ul class="sidebar-links">
+           <li>
+             <a href="/" class="sidebar-link">
+               <i class="fas fa-home fa-fw"></i>
+               home
+             </a>
+           </li>
+           <li>
+               <a href="/menu" class="sidebar-link">
+                   <i class="fas fa-location-arrow"></i>
+                 menu
+               </a>
+           </li>
+         </ul>
+      </aside>
+   </div>
+
+<%- include('partials/footer1') -%>

@@ -1,0 +1,66 @@
+<%- include('partials/header')  -%>  
+  <section class="header">
+     <div class="nav-bar">
+         <div class="logo">
+         <div class="circle"></div>
+         <h2>RoadMap_Shop</h2>
+         </div>
+         <div class="nav-option"> 
+          <li><button class="nav-links"><a href="/">Home</a></button></li>
+          <li><button class="nav-links"><a href="/menu">Menu</a></button></li>
+          <li><button class="nav-links"><a href="/contact">Contact</a></button></li>
+          <li><button class="nav-links"><a href="/about">About</a></button></li>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button> 
+          <a href="/search"><button class="search-bar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button></a>
+         </div>
+     </div>
+  </section>
+  <section class="sec_a">
+      <div class="text">
+          <div class="text-info">
+              <h3>What do you want be...</h3>
+              <div class="job">
+                 <h1 class="job-name"><span type>Web Developers?</span></h1> 
+              </div>
+              <div class="moto">
+                 <h3>Lorem ipsum dolor, sit amet consectetursdfidishfui adipisicin sit amet consectetur adipisicin!</h3>
+              </div>
+          </div>
+          <div class="getstart">
+              <a href="/menu"><button class="btn-pri">START</button></a>
+          </div>
+      </div>
+      <div class="image">
+          <img src="https://varcode-project.github.io/creative-at-home/ilustrasi/coder.svg" alt="">
+      </div>
+  </section>
+    <div class="overlay">
+     <div class="auth-overlay_1">
+        <h1 class="title_auth">Log In</h1>
+        <p class="auth_text">Please fill in this form to Log In to your account.</p>
+        <% if (messages.error) { %>
+          <%= messages.error %>
+        <% } %>
+        <form action="/login" method="post">
+          <div>
+            <label class="label_auth" for="email">Email</label>
+            <input type="email" id="email" name="email" class="auth_input" required>
+          </div>
+          <div>
+            <label class="label_auth" for="password">Password</label>
+            <input type="password" id="password" name="password" class="auth_input" required>
+          </div>  
+          <input type="checkbox" style=" width:20px;" onclick="myFunction()">
+          <label style=" font-size:1.3rem;" >Show Password</label>
+           <div class="clearfix">
+            <button type="submit" class="loginbtn">Log In</button>
+            <a href="/register"><button type="button" class="signupbtn">Sign Up</button></a>
+          </div>
+        </form>
+      </div>
+      </div>
+ <%- include('partials/footer') -%>

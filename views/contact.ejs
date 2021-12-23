@@ -1,0 +1,65 @@
+<%- include('partials/header') -%>
+<section class="header">
+    <div class="nav-bar">
+        <div class="logo">
+        <div class="circle"></div>
+        <h2>RoadMap_Shop</h2>
+        </div>
+        <div class="nav-option">
+         <li><button class="nav-links"><a href="/">Home</a></button></li>
+         <li><button class="nav-links"><a href="/menu">Menu</a></button></li>
+         <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+        </button> 
+        </div>
+    </div>
+</section>
+<div class="contact_head">
+<h1>Get In Touch</h1>
+</div>
+<div class="flex">
+<section class="contact-container">
+    <div class="contact">
+    <form action="/contact" method="post">
+        <div class="Name">
+           <label>Name: </label>
+        </div>
+        <input type="text" name="username" placeholder="Enter Name" class="ans">
+        <div class="Email">
+            <label>Email: </label>
+        </div>
+            <input type="email" name="email" placeholder="Enter Email" class="ans">
+        <div class="doubt">
+            <label>Message: </label>
+        </div>
+            <textarea name="query"  cols="60" rows="10" class="ans"></textarea>
+        <div>
+        <button type="submit" class="contact_btn">Send</button>
+       </div>
+    </form>
+    </div>
+</section>
+</div>
+<div class="sidebar-overlay">
+    <aside class="sidebar">
+     <button class="sidebar-close">
+         <i class="fas fa-times"></i>
+       </button>
+       <!-- links -->
+       <ul class="sidebar-links">
+         <li>
+           <a href="/" class="sidebar-link">
+             <i class="fas fa-home fa-fw"></i>
+             home
+           </a>
+         </li>
+         <li>
+             <a href="/menu" class="sidebar-link">
+                 <i class="fas fa-location-arrow"></i>
+               menu
+             </a>
+         </li>
+       </ul>
+    </aside>
+ </div>
+<%- include('partials/footer') -%>
