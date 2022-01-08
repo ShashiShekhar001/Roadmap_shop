@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Document</title>
+  
+</head>
+<body>
+  <section class="header">
+    <div class="nav-bar">
+        <div class="logo">
+        <div class="circle"></div>
+        <h2>RoadMap_Shop</h2>
+        </div>
+        <div class="nav-option">
+         <li><button class="nav-links"><a href="/">Home</a></button></li>
+         <li><button class="nav-links"><a href="/menu">Menu</a></button></li>
+         <button class="toggle-nav">
+           <i class="fas fa-bars"></i>
+         </button> 
+       </div>
+    </div>
+ </section>
+<section class="search-container">
+ <form action="/search" method="post">
+    <div>
+    <input class="srch" type="text" name="search" placeholder="Search For Skill">
+    </div>
+   <button type="submit" class="search-btn">Search</button>
+ </form>
+</section>
+<div class="sidebar-overlay">
+  <aside class="sidebar">
+   <button class="sidebar-close">
+       <i class="fas fa-times"></i>
+     </button>
+     <!-- links -->
+     <ul class="sidebar-links">
+       <li>
+         <a href="/" class="sidebar-link">
+           <i class="fas fa-home fa-fw"></i>
+           home
+         </a>
+       </li>
+       <li>
+           <a href="/menu" class="sidebar-link">
+               <i class="fas fa-location-arrow"></i>
+             menu
+           </a>
+       </li>
+     </ul>
+  </aside>
+</div>
+</body>
+<footer>
+    <script src="js/main.js"></script>
+</footer>
+</html>

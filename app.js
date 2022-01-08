@@ -166,6 +166,7 @@ app.post("/search",function(req,res){
  });
  res.send("NOT FOUND");
 });
-app.listen(3000,function(){
+const PORT=process.env.PORT;
+app.listen(PORT,function(){
   console.log("server is running on port 3000");
 });
