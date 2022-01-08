@@ -68,7 +68,7 @@ app.set('view engine','ejs');
 
 app.use(flash())
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET|| "secret",
   resave: false,
   saveUninitialized: false
 }))
